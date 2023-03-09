@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 
 import { LoginPage } from '../auth';
 import { HeroesApp } from '../HeroesApp';
-import { MarvelPage, DCPage, HeroesRoutes } from '../heroes';
+import { MarvelPage, DCPage, HeroesRoutes, SearchPage, HeroPage } from '../heroes';
 
 export const router = createBrowserRouter([
   {
@@ -24,6 +24,14 @@ export const router = createBrowserRouter([
           {
             path: '/dc',
             element: <DCPage />,
+          },
+          {
+            path: 'search',
+            element: <SearchPage />,
+          },
+          {
+            path: '/hero',
+            element: <HeroPage />,
           },
           {
             path: '*',
