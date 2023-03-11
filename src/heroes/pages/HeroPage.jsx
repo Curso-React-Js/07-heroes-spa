@@ -1,11 +1,16 @@
 import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import { getHeroById } from '../helpers';
+import { useMemo } from 'react';
 
 export const HeroPage = () => {
   const { id, ...rest } = useParams();
   const navigate = useNavigate();
 
-  const hero = getHeroById(id);
+  // Memorizar (una funcion)
+  // Dispara el callback cada vez que sus dependencias cambian
+  // Las dependencias seran el id, cuando el id cambia 
+  // va a volver a disparar el callback
+  const hero = useMemo( () => getHeroById(id), [ id ] );
   // console.log(hero);
 
   const onNavigateBack = () => {
