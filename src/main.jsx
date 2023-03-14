@@ -10,11 +10,11 @@ import { HeroesApp } from './HeroesApp';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AuthProvider>
+    {/* <AuthProvider> */}
       {/* <RouterProvider router={ router } /> */}
       <BrowserRouter>
         <HeroesApp />
       </BrowserRouter>
-    </AuthProvider>
+    {/* </AuthProvider> */}
   </React.StrictMode>,
 );
